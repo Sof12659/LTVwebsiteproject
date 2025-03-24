@@ -40,16 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Background music autoplay handling
     const audio = document.getElementById('backgroundMusic');
-    if (audio) {
-        const unmuteAudio = () => {
-            audio.muted = false;
-            document.removeEventListener('click', unmuteAudio);
-            document.removeEventListener('scroll', unmuteAudio);
-        };
 
-        document.addEventListener('click', unmuteAudio, { once: true });
-        document.addEventListener('scroll', unmuteAudio, { once: true });
-    }
+    const unmuteAudio = () => {
+        audio.muted = false;
+        audio.play().then(() => {
+            console.log('Audio started after user interaction.');
+        }).catch((error) => {
+            console.error('Playback prevented:', error);
+        });
+
+        document.removeEventListener('click', unmuteAudio);
+        document.removeEventListener('scroll', unmuteAudio);
+    };
+
+    document.addEventListener('click', unmuteAudio, { once: true });
+    document.addEventListener('scroll', unmuteAudio, { once: true });
+
 });
