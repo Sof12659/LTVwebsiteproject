@@ -157,3 +157,42 @@ button:hover {
 #backgroundMusic {
   display: none;
 }
+
+
+.header-image {
+    background-image: url('back.jpg'); /* Replace with your desired image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 50px;
+    text-align: center;
+    color: white;
+}
+
+.header-overlay {
+    background-color: rgba(173, 216, 230, 0.8); /* Light blue with opacity */
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.header-overlay h1,
+.header-overlay p {
+    margin: 10px 0;
+}
+
+.scroll-down {
+    margin-top: 15px;
+}
+
+.scroll-down a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-down a:hover {
+    opacity: 1;
+}
