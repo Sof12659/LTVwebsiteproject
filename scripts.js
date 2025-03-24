@@ -1,6 +1,7 @@
 // scripts.js
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Contact form functionality
     const openFormBtn = document.getElementById('openFormBtn');
     const closeFormBtn = document.getElementById('closeFormBtn');
     const contactForm = document.getElementById('contactForm');
@@ -27,11 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scroll behavior - robust implementation
+    // Smooth scroll behavior
     const scrollLink = document.querySelector('.scroll-down a');
     scrollLink?.addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1); // remove '#' from href
+        const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
@@ -39,17 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-  const audio = document.getElementById('backgroundMusic');
+    // Background music autoplay handling
+    const audio = document.getElementById('backgroundMusic');
+    if (audio) {
+        const unmuteAudio = () => {
+            audio.muted = false;
+            document.removeEventListener('click', unmuteAudio);
+            document.removeEventListener('scroll', unmuteAudio);
+        };
 
-  // Unmute audio on first user interaction
-  const unmuteAudio = () => {
-    audio.muted = false;
-    document.removeEventListener('click', unmuteAudio);
-    document.removeEventListener('scroll', unmuteAudio);
-  };
-
-  document.addEventListener('click', unmuteAudio, { once: true });
-  document.addEventListener('scroll', unmuteAudio, { once: true });
-});
+        document.addEventListener('click', unmuteAudio, { once: true });
+        document.addEventListener('scroll', unmuteAudio, { once: true });
+    }
 });
