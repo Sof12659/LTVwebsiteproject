@@ -38,4 +38,18 @@ document.addEventListener('DOMContentLoaded', function() {
             targetSection.scrollIntoView({ behavior: 'smooth' });
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const audio = document.getElementById('backgroundMusic');
+
+  // Unmute audio on first user interaction
+  const unmuteAudio = () => {
+    audio.muted = false;
+    document.removeEventListener('click', unmuteAudio);
+    document.removeEventListener('scroll', unmuteAudio);
+  };
+
+  document.addEventListener('click', unmuteAudio, { once: true });
+  document.addEventListener('scroll', unmuteAudio, { once: true });
+});
 });
