@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const audio = document.getElementById('backgroundMusic');
+   const audio = document.getElementById('backgroundMusic');
 
     const unmuteAudio = () => {
         audio.muted = false;
@@ -56,5 +56,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('click', unmuteAudio, { once: true });
     document.addEventListener('scroll', unmuteAudio, { once: true });
-
 });
