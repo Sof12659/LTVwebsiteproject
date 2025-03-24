@@ -153,3 +153,7 @@ button:hover {
 .scroll-down a:hover {
     opacity: 1;
 }
+
+#backgroundMusic {
+  display: none;
+}
