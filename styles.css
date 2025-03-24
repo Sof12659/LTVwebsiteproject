@@ -1,0 +1,155 @@
+/* styles.css - Modern Look */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    background-color: #e8f0fe;
+}
+
+header {
+    background: linear-gradient(to right, #007bff, #00aaff);
+    color: white;
+    padding: 100px 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+section {
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 900px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contact Form Styling */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.form-container input[type=text],
+.form-container input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 18px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-container .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.form-container .cancel {
+    background-color: #6c757d;
+}
+
+.form-container .btn:hover {
+    opacity: 0.85;
+}
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.benefits-header {
+    padding: 0px;
+}
+
+.scroll-down {
+    margin-top: 20px;
+}
+
+.scroll-down a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-down a:hover {
+    opacity: 1;
+}
