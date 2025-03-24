@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-   const audio = document.getElementById('backgroundMusic');
+    const audio = document.getElementById('backgroundMusic');
 
     const unmuteAudio = () => {
         audio.muted = false;
