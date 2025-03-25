@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     color: #222;
-    background-color: #e8f0fe;
+    background-color: rgb(44, 62, 80, 1);
 }
 
 .header-image {
@@ -50,7 +50,7 @@ ul {
 }
 
 button {
-    background-color: #007bff;
+    background-color:rgb(0, 76, 153, 1);
     color: white;
     border: none;
     padding: 12px 24px;
