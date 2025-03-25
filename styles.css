@@ -17,6 +17,8 @@ body {
     padding: 100px 50px;
     text-align: center;
     color: white;
+    margin-top: 150px; 
+    margin-bottom:150px;
 }
 
 .header-overlay {
